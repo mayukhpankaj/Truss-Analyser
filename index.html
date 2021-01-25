@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Truss analyser</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  //<script src="truss.js" type="text/javascript"></script>
+  <script src="math.js" type="text/javascript"></script>
+
+
+</head>
+
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    background-color: #434343;
+    background-image:linear-gradient(#434343, #282828);
+}
+#content{
+    background-color: transparent;
+    background-image:       linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+  height:100%;
+  background-size:50px 50px;
+}
+</style>
+
+
+
+<body>
+<h2> &nbsp Truss Analyser</h2>
+<br>
+
+<div id="content">
+	<br>
+<center>
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+</center>
+
+&nbsp; &nbsp;<p id="result" style="color:white;"></p>
+<br>
+
+
+<button onclick="addjoint();return false;">Add Joint  </button> X... <input type="number" id="nx" />  <input type="number" id="ny" /> <br><br>
+<button onclick="addmember()">Add Member .</button> <input type="number" id="ms" /> <input type="number" id="me" />  <br><br> 
+<button onclick="addforce()">Add Force</button> ......<input type="number" id="fx" /> <input type="number" id="fy" />
+<input type="number"id="fn"/>
+<br><br>
+<button onclick="addsupport()">Add Support</button>     
+  <input type="radio" id="fixed" name="support" >
+  <label for="male">Fixed</label>
+  <input type="radio" id="roller" name="support" >
+  <label for="female">Roller</label>                      
+  <input type="number" id="sn" />
+  <br><br>
+ 
+<button onclick="analyse()">Analyse  </button> <br><br> 
+
+
+	
+
+
+</div>
+
+
+
+</body>
+</html>
